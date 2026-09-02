@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SmileLab Dental Center — Website Mockup
 
-## Getting Started
+A high-fidelity Next.js mockup for SmileLab Dental Center (Quezon City), built with the App Router, TypeScript, and Tailwind CSS v4. Structural/UX patterns are inspired by Vivid Dental (vividdental.ca); all brand identity, copy, colors, and media are SmileLab's own.
 
-First, run the development server:
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build (static export of all 10 routes)
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `src/app/` — routes: home, about, problems-we-treat, new-patients, contact, services (hub + `[category]` dynamic route)
+- `src/components/layout/` — Header, DesktopNav, MegaMenu, MobileNav, Footer, Logo
+- `src/components/sections/` — Hero, PageHero, ServiceFeature/Grid, DentistProfile, BeforeAfterSlider, TreatmentJourney, TestimonialSection, FAQ, ContactCTA, MediaSection, etc.
+- `src/content/` — typed data: `site.ts`, `services.ts`, `nav.ts`, `problems.ts`, `faqs.ts`, `testimonials.ts`, `why-choose.ts`
+- `public/images/manifest.json` — provenance record for every image asset used (real vs. excluded, and why)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Real SmileLab assets used
 
-## Learn More
+Logo (both lockups), real clinic interior photography (cropped from posters), the real dentist portrait (cropped to remove a competing clinic's signage), real clinical before/after documentation, real implant product photography, and real orthodontic macro photography. Brand taglines and service copy are lifted directly from SmileLab's own posters where available. Full provenance is in `public/images/manifest.json`.
 
-To learn more about Next.js, take a look at the following resources:
+Two stock-style photos found in SmileLab's own Facebook ad graphics were deliberately **not** reused (unclear stock licensing for redistribution) — see `manifest.json` → `notUsed`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Remaining placeholders (need real SmileLab input before launch)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Facebook Page URL** — CTA buttons link to `#`; source materials only show "Message us on FB" without exposing the Page URL (`src/content/site.ts` → `facebookUrl`).
+- **Exact clinic address** — only "Quezon City" is confirmed; the contact page intentionally shows an area label + a labeled map placeholder rather than a fabricated address.
+- **Business hours** — shown with a visible disclaimer that they're indicative, not confirmed.
+- **Dentist name/credentials** — the About/home dentist sections intentionally omit invented years of experience, certifications, or memberships; a disclosure note says these are pending confirmation.
+- **Testimonials** — clearly labeled as representative/placeholder, not real submitted reviews.
+- **Contact form** — client-side only (shows a success state on submit); needs a real backend/email integration before launch.
 
-## Deploy on Vercel
+## Manual review suggested
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Swap the placeholder Facebook URL and confirm hours/address, then remove the corresponding disclaimers.
+- Consider commissioning real photography for the About/New Patients hero and a proper clinic exterior shot for Contact — the current build deliberately avoids stretching low-resolution cropped assets to full-bleed hero size.
+- Confirm the dentist's name and real credentials before publishing the About page bio.

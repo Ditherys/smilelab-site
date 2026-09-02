@@ -1,0 +1,74 @@
+{
+  "notes": "Provenance record for images used on the SmileLab mockup site. 'real' = sourced/cropped directly from SmileLab's own materials found in the project folder. No Vivid Dental assets are used anywhere.",
+  "assets": [
+    {
+      "path": "team/dentist-portrait",
+      "origin": "real",
+      "source": "Dentist.jpg",
+      "treatment": "Cropped to remove a competing dental clinic's signage visible in the original background.",
+      "usage": ["About page dentist profile", "Home dentist spotlight"]
+    },
+    {
+      "path": "clinic/reception-interior",
+      "origin": "real",
+      "source": "Soft Opening Special poster photo (769051741_...)",
+      "treatment": "Cropped to isolate the real SmileLab Quezon City reception/feature-wall photography, excluding overlaid promo text.",
+      "usage": ["Home hero support image", "About page clinic photography", "Contact page"]
+    },
+    {
+      "path": "clinical/implant-product-macro",
+      "origin": "real",
+      "source": "'Missing a Tooth?' poster (770252658_...)",
+      "treatment": "Cropped to isolate the implant/crown product macro photo.",
+      "usage": ["Dental implants feature section"]
+    },
+    {
+      "path": "clinical/implant-parts-diagram",
+      "origin": "real",
+      "source": "'What is a Dental Implant?' poster (771821274_...)",
+      "treatment": "Cropped to isolate the implant/abutment/crown product photography band.",
+      "usage": ["Dental implants service page"]
+    },
+    {
+      "path": "clinical/braces-macro",
+      "origin": "real",
+      "source": "'More than just Straighter Teeth' poster (774042605_...)",
+      "treatment": "Cropped to isolate the real intraoral braces macro photo.",
+      "usage": ["Orthodontics service page/section"]
+    },
+    {
+      "path": "clinical/before-after-crown",
+      "origin": "real",
+      "source": "515320716_...jpg",
+      "treatment": "Used near-original (high native resolution); this is real SmileLab clinical documentation.",
+      "usage": ["Before/After transformation section"]
+    },
+    {
+      "path": "clinical/before-after-implant-timeline",
+      "origin": "real",
+      "source": "514254559_...jpg",
+      "treatment": "Used as supplementary case documentation.",
+      "usage": ["Before/After gallery (supplementary case)"]
+    },
+    {
+      "path": "brand/logo-badge-source",
+      "origin": "real",
+      "source": "Cropped from 763119997 poster (clean white-background badge lockup)",
+      "treatment": "Cropped to isolate the circular logo badge.",
+      "usage": ["Footer badge, favicon source"]
+    }
+  ],
+  "notUsed": [
+    {
+      "source": "768375417_...jpg / 772443846_...jpg (stock-style model photography used in SmileLab's own Facebook ads)",
+      "reason": "Unclear stock licensing for redistribution outside SmileLab's own ad account; excluded from the site build. Real copy/taglines from these posters were still used as legitimate SmileLab brand copy."
+    },
+    {
+      "source": "770955516_...jpg ('Why Choose Implants' — real but graphic intraoral photo of an abutment mid-treatment)",
+      "reason": "Reviewed and excluded from public-facing marketing pages as too clinically graphic for a general-audience site; the brand copy/benefit list from this poster was still reused."
+    }
+  ],
+  "logo": {
+    "implementation": "Recreated as a crisp inline SVG/CSS wordmark (navy 'SmileLab' + blush tooth-heart accent over the 'i', 'DENTAL CENTER — QUEZON CITY' subtext) matching the real logo's exact colors and composition, so it renders sharp at any size/background instead of a raster crop. The real raster logo badge is also included (brand/logo-badge-source) and used where a photographic badge is appropriate."
+  }
+}
